@@ -10,6 +10,11 @@ from PyQt5.QtGui import QPixmap, QColor
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
+if len(sys.argv) > 1:
+  model_name = sys.argv[1]
+else:
+  model_name = "prakasharyan/qwen-arabic"
+
 template = """
 أنت مساعد ذكي يتحدث اللغة العربية فقط. مهمتك هي الرد على الأسئلة بدقة ووضوح، باستخدام اللغة العربية الفصحى، بناءً على سياق المحادثة السابق.
 
@@ -23,7 +28,7 @@ template = """
 """
 
 prompt = ChatPromptTemplate.from_template(template)
-model = OllamaLLM(model="prakasharyan/qwen-arabic")
+model = OllamaLLM(model=model_name)
 chain = prompt | model
 
 
