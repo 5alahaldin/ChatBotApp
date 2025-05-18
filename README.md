@@ -22,7 +22,6 @@ Lyla uses an **Ollama** language model through **LangChain**. It is configured t
 The default model used is: `prakasharyan/qwen-arabic`
 **You can also specify a different model** when running the app.
 
----
 
 ## How to Run
 
