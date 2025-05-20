@@ -6,7 +6,6 @@
 ## Features
 
 * Beautiful UI using PyQt5
-* Typing animation for responses
 * Remembers previous chat context
 * Powered by Ollama + LangChain
 * Press `Enter` to send messages
